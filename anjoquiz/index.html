@@ -1,0 +1,1389 @@
+<html lang="pt-BR"><head>
+    <script>
+  window.pixelId = "67c66d20a7cbb469e41ebae8";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Descubra Seu Anjo da Guarda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: radial-gradient(ellipse at center, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+            touch-action: manipulation;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+        }
+        
+        /* Estrelas no fundo */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+                radial-gradient(2px 2px at 160px 30px, #fff, transparent);
+            background-repeat: repeat;
+            background-size: 200px 100px;
+            animation: twinkle 4s ease-in-out infinite alternate;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        /* Proteção extra para iOS overscroll */
+        body::after {
+            content: '';
+            position: fixed;
+            top: -100vh;
+            left: 0;
+            width: 100%;
+            height: 300vh;
+            background: #000000;
+            z-index: -2;
+            pointer-events: none;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        .container {
+            background: linear-gradient(145deg, rgba(25, 25, 112, 0.15), rgba(72, 61, 139, 0.1));
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 30px;
+            max-width: 650px;
+            width: 100%;
+            text-align: center;
+            border: 2px solid rgba(218, 165, 32, 0.3);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 0 50px rgba(218, 165, 32, 0.1);
+            animation: fadeInUp 1s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Ornamento decorativo no topo */
+        .container::before {
+            content: '✝';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: #daa520;
+            background: radial-gradient(circle, rgba(25, 25, 112, 0.9), transparent);
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(218, 165, 32, 0.5);
+        }
+        
+        /* Ornamentos nas bordas */
+        .container::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba(218, 165, 32, 0.2);
+            border-radius: 20px;
+            pointer-events: none;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .title {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #daa520, #ffd700, #fff8dc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            margin-top: 40px;
+            text-shadow: 0 0 30px rgba(218, 165, 32, 0.5);
+            letter-spacing: 2px;
+            position: relative;
+        }
+        
+        .title::after {
+            content: '◊ ◊ ◊';
+            display: block;
+            font-size: 0.8rem;
+            color: #daa520;
+            margin-top: 10px;
+            letter-spacing: 10px;
+        }
+        
+        .progress-container {
+            margin: 25px 0;
+            position: relative;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(25, 25, 112, 0.4);
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid rgba(218, 165, 32, 0.3);
+        }
+        
+        .progress-fill {
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, #daa520, #ffd700);
+            border-radius: 4px;
+            animation: progressFill 1.5s ease-out;
+            position: relative;
+            box-shadow: 0 0 15px rgba(218, 165, 32, 0.6);
+        }
+        
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes progressFill {
+            from { width: 0%; }
+            to { width: 50%; }
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+       .description {
+    font-size: 1.2rem;
+    color: #e6e6fa;
+    margin: 30px 0;
+    line-height: 1.8;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; /* 400 = normal, 700 = bold */
+}
+        
+        .highlight {
+            color: #daa520;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
+        }
+        
+        .angels-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 25px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .angel-card {
+            width: 120px;
+            height: 160px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+            background: linear-gradient(145deg, rgba(72, 61, 139, 0.2), rgba(25, 25, 112, 0.1));
+            position: relative;
+            border: 2px solid rgba(218, 165, 32, 0.3);
+        }
+        
+        .angel-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: conic-gradient(from 0deg, #daa520, #ffd700, #daa520);
+            border-radius: 22px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .angel-card:hover::before {
+            opacity: 1;
+            animation: rotate 2s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .angel-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.5),
+                0 0 50px rgba(218, 165, 32, 0.3);
+        }
+        
+        .angel-image {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            transition: all 0.4s ease;
+            filter: sepia(20%) saturate(1.2) brightness(1.1);
+        }
+        
+        .angel-card:hover .angel-image {
+            transform: scale(1.1);
+            filter: sepia(30%) saturate(1.4) brightness(1.3);
+        }
+        
+        .angel-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(25, 25, 112, 0.9), rgba(25, 25, 112, 0.5));
+            color: #daa520;
+            padding: 12px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
+        }
+        
+        .question {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #e6e6fa;
+            margin: 30px 0 20px;
+            text-shadow: 0 0 15px rgba(230, 230, 250, 0.3);
+        }
+        
+        .input-container {
+            margin: 25px 0;
+            position: relative;
+        }
+        
+        .age-input {
+            width: 100%;
+            max-width: 350px;
+            padding: 20px 25px;
+            font-size: 1.4rem;
+            font-family: 'Cormorant Garamond', serif;
+            border: 2px solid rgba(218, 165, 32, 0.4);
+            border-radius: 15px;
+            outline: none;
+            transition: all 0.4s ease;
+            background: rgba(25, 25, 112, 0.2);
+            color: #e6e6fa;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .age-input::placeholder {
+            color: rgba(230, 230, 250, 0.6);
+            font-style: italic;
+        }
+        
+        .age-input:focus {
+            border-color: #daa520;
+            background: rgba(25, 25, 112, 0.3);
+            box-shadow: 
+                0 0 0 3px rgba(218, 165, 32, 0.2),
+                0 0 30px rgba(218, 165, 32, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #daa520, #b8860b);
+            color: #1a1a2e;
+            border: none;
+            padding: 20px 45px;
+            font-size: 1.3rem;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            margin-top: 20px;
+            box-shadow: 
+                0 8px 25px rgba(218, 165, 32, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 
+                0 15px 35px rgba(218, 165, 32, 0.4),
+                0 0 30px rgba(218, 165, 32, 0.3);
+            background: linear-gradient(135deg, #ffd700, #daa520);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        /* Efeito de partículas flutuantes */
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, #daa520, transparent);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 1s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 2s; }
+        .particle:nth-child(4) { left: 70%; animation-delay: 1.5s; }
+        .particle:nth-child(5) { left: 80%; animation-delay: 0.5s; }
+        .particle:nth-child(6) { left: 90%; animation-delay: 2.5s; }
+        
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+                transform: translateY(90vh) scale(1);
+            }
+            90% {
+                opacity: 1;
+                transform: translateY(10vh) scale(1);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            html {
+                background: radial-gradient(ellipse at center, #0a0a0f 0%, #0b0b15 50%, #000000 100%);
+                overscroll-behavior-y: none;
+                -webkit-overflow-scrolling: auto;
+            }
+            
+            body {
+                padding: 10px;
+                position: relative;
+                background: radial-gradient(ellipse at center, #0a0a0f 0%, #0b0b15 50%, #000000 100%);
+                background-attachment: fixed;
+                align-items: flex-start;
+                padding-top: 50px;
+            }
+            
+            body::after {
+                height: 400vh;
+                top: -150vh;
+                background: radial-gradient(ellipse at center, #0a0a0f 0%, #0b0b15 50%, #000000 100%);
+            }
+            
+            .container {
+                padding: 15px 12px;
+                margin: 0;
+                border-radius: 15px;
+                max-width: 100%;
+                position: relative;
+                z-index: 1;
+                min-height: auto;
+            }
+            
+            .title {
+                font-size: 1.8rem;
+                margin-bottom: 12px;
+                margin-top: 20px;
+                letter-spacing: 1px;
+                line-height: 1.2;
+            }
+            
+            .title::after {
+                font-size: 0.5rem;
+                margin-top: 5px;
+                letter-spacing: 6px;
+            }
+            
+            .progress-container {
+                margin: 12px 0;
+            }
+            
+            .progress-bar {
+                height: 6px;
+            }
+            
+            .description {
+                font-size: 1.4rem;
+                margin: 30px 0;
+                line-height: 1.4;
+                padding: 0 5px;
+            }
+            
+            .angels-container {
+                gap: 6px;
+                margin: 15px 0;
+                justify-content: space-around;
+            }
+            
+            .angel-card {
+                width: 90px;
+                height: 130px;
+                border-radius: 12px;
+            }
+            
+            .angel-image {
+                height: 105px;
+            }
+            
+            .angel-name {
+                padding: 4px;
+                font-size: 0.65rem;
+                letter-spacing: 0.3px;
+            }
+            
+            .question {
+                font-size: 1.3rem;
+                margin: 30px 0 30px;
+            }
+            
+            .input-container {
+                margin: 12px 0;
+            }
+            
+            .age-input {
+                max-width: 280px;
+                padding: 12px 15px;
+                font-size: 1.1rem;
+                border-radius: 10px;
+            }
+            
+            .submit-btn {
+                padding: 14px 25px;
+                font-size: 1rem;
+                margin-top: 12px;
+                border-radius: 10px;
+                line-height: 1.2;
+            }
+            
+            .container::before {
+                font-size: 1.3rem;
+                top: -10px;
+                padding: 6px;
+            }
+        }
+        
+       /* Ajustes para mobile landscape */
+        @media (max-width: 900px) and (max-height: 500px) {
+            html {
+                background: radial-gradient(ellipse at center, #0a0a0f 0%, #0b0b15 50%, #000000 100%);
+            }
+            
+            body {
+                align-items: flex-start;
+                padding-top: 10px;
+                background: radial-gradient(ellipse at center, #0a0a0f 0%, #0b0b15 50%, #000000 100%);
+                background-attachment: fixed;
+            }
+            
+            .container {
+                margin-top: 0;
+                padding: 15px;
+            }
+            
+            .title {
+                font-size: 1.8rem;
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+            
+            .angels-container {
+                margin: 15px 0;
+            }
+            
+            .angel-card {
+                width: 90px;
+                height: 130px;
+            }
+            
+            .angel-image {
+                height: 105px;
+            }
+        }        /* Mobile touch improvements */
+        @media (max-width: 600px) {
+            .age-input:focus {
+                transform: translateY(-1px) scale(1.01);
+                box-shadow: 
+                    0 0 0 2px rgba(218, 165, 32, 0.3),
+                    0 0 20px rgba(218, 165, 32, 0.2);
+            }
+            
+            .submit-btn:active {
+                transform: scale(0.98);
+            }
+            
+            .angel-card:hover {
+                transform: translateY(-5px) scale(1.02);
+            }
+            
+            /* Melhor espaçamento para toque */
+            .angels-container {
+                padding: 0 5px;
+            }
+            
+            /* Evita zoom acidental em inputs */
+            .age-input {
+                font-size: 16px; /* Evita zoom automático no iOS */
+            }
+        }
+
+        /* ESTILOS PARA A TELA DE RESULTADO */
+        .result-content {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .result-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #e6e6fa;
+            margin-bottom: 30px;
+            line-height: 1.4;
+            text-shadow: 0 0 15px rgba(230, 230, 250, 0.3);
+        }
+        
+        .angel-result-image {
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .result-angel-img {
+            width: 200px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 3px solid rgba(218, 165, 32, 0.5);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 50px rgba(218, 165, 32, 0.3);
+            filter: sepia(20%) saturate(1.2) brightness(1.1);
+            animation: angelGlow 3s ease-in-out infinite alternate;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .result-angel-img:hover {
+            transform: scale(1.05);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.5),
+                0 0 70px rgba(218, 165, 32, 0.4);
+        }
+        
+        @keyframes angelGlow {
+            0% { box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 50px rgba(218, 165, 32, 0.3); }
+            100% { box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 80px rgba(218, 165, 32, 0.5); }
+        }
+        
+        .angel-description {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: #daa520;
+            margin: 25px 0;
+            line-height: 1.6;
+            font-style: italic;
+            text-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
+        }
+        
+        .call-to-action {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: #e6e6fa;
+            margin: 25px 0;
+            line-height: 1.5;
+        }
+        
+        .manifest-btn {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            border: none;
+            padding: 22px 40px;
+            font-size: 1.2rem;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            margin-top: 25px;
+            box-shadow: 
+                0 10px 30px rgba(16, 185, 129, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            line-height: 1.4;
+            animation: btnPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes btnPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .play-icon {
+            display: inline-block;
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+        
+        .manifest-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 
+                0 15px 40px rgba(16, 185, 129, 0.4),
+                0 0 30px rgba(16, 185, 129, 0.3);
+            background: linear-gradient(135deg, #059669, #047857);
+        }
+        
+        .manifest-btn:active {
+            transform: translateY(-1px) scale(1.02);
+        }
+        
+        /* AJUSTES MOBILE PARA RESULTADO */
+        @media (max-width: 600px) {
+            .result-content {
+                padding: 15px 0;
+            }
+            
+            .result-title {
+                font-size: 1.4rem;
+                margin-bottom: 20px;
+                line-height: 1.3;
+                padding: 30px;
+            }
+            
+            .angel-result-image {
+                margin: 20px 0;
+            }
+            
+            .result-angel-img {
+                width: 140px;
+                height: 200px;
+            }
+            
+            .angel-description {
+                font-size: 1.1rem;
+                margin: 22px 0;
+                padding: 0 8px;
+                line-height: 1.4;
+            }
+            
+            .call-to-action {
+                font-size: 1rem;
+                margin: 15px 0;
+                padding: 0 5px;
+                line-height: 1.3;
+            }
+            
+            .manifest-btn {
+                padding: 14px 25px;
+                font-size: 0.9rem;
+                line-height: 1.2;
+                margin-block: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .result-content {
+                padding: 10px 0;
+            }
+            
+            .result-title {
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+                padding: 30px;
+            }
+            
+            .angel-result-image {
+                margin: 15px 0;
+            }
+            
+            .result-angel-img {
+                width: 140px;
+                height: 230px;
+                border-radius: 15px;
+            }
+            
+            .angel-description {
+                font-size: 1.2rem;
+                margin: 12px 0;
+                padding: 0 5px;
+            }
+            
+            .call-to-action {
+                font-size: 1rem;
+                margin: 12px 0;
+                padding: 0 3px;
+            }
+            
+            .manifest-btn {
+                padding: 12px 20px;
+                font-size: 0.8rem;
+                margin-top: 12px;
+                border-radius: 10px;
+            }
+            
+            .play-icon {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Partículas flutuantes -->
+    <div class="floating-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="container">
+        <h1 class="title">O Anjo da riqueza revela quando você ficará rico!</h1>
+        
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+        
+        <p class="description">
+           Descubra seu <span class="highlight">Anjo da Riqueza</span>, pela sua data de nascimento...
+        </p>
+        
+        <div class="angels-container">
+            <div class="angel-card">
+                <!-- Substitua src por imagem do Arcanjo Miguel -->
+                <img src="images/Raphael.png" class="angel-image">
+                <div class="angel-name">Raphel</div>
+            </div>
+            <div class="angel-card">
+                <!-- Substitua src por imagem do Arcanjo Rafael -->
+                <img src="images/miguel3.png" alt="Arcanjo Rafael" class="angel-image">
+                <div class="angel-name">Miguel</div>
+            </div>
+            <div class="angel-card">
+                <!-- Substitua src por imagem do Arcanjo Gabriel -->
+                <img src="images/Gabriel.png" alt="Arcanjo Gabriel" class="angel-image">
+                <div class="angel-name">Gabriel</div>
+            </div>
+        </div>
+        
+        <h2 class="question">Qual a sua idade?</h2>
+        
+        <div class="input-container">
+            <input type="number" class="age-input" placeholder="Sua idade..." min="8" max="110">
+        </div>
+        
+        <button class="submit-btn" onclick="submitAge()">✨ Revelar Minha Resposta ✨</button>
+    </div>
+
+    <script>
+        function submitAge() {
+            const ageInput = document.querySelector('.age-input');
+            const age = ageInput.value;
+            
+            if (!age || age < 8 || age > 110) {
+                alert('Por favor, digite uma idade válida entre 8 e 110 anos para continuar sua jornada espiritual.');
+                return;
+            }
+            
+            // Efeito visual ao clicar
+            const btn = document.querySelector('.submit-btn');
+            btn.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                btn.style.transform = '';
+            }, 100);
+            
+            // Atualizar barra de progresso
+            const progressFill = document.querySelector('.progress-fill');
+            progressFill.style.width = '100%';
+            
+            // Scroll para o topo
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Trocar pergunta e input
+            setTimeout(() => {
+                const question = document.querySelector('.question');
+                question.textContent = 'Qual seu nome?';
+                
+                const inputContainer = document.querySelector('.input-container');
+                inputContainer.innerHTML = '<input type="text" class="age-input name-input" placeholder="Seu nome..." maxlength="50">';
+                
+                const submitButton = document.querySelector('.submit-btn');
+                submitButton.textContent = '✨ Descobrir Meu Anjo ✨';
+                submitButton.onclick = submitName;
+                
+                // Reaplicar eventos no novo input
+                const nameInput = document.querySelector('.name-input');
+                nameInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        submitName();
+                    }
+                });
+                
+                nameInput.addEventListener('focus', function() {
+                    this.style.transform = 'scale(1.02)';
+                });
+                
+                nameInput.addEventListener('blur', function() {
+                    this.style.transform = 'scale(1)';
+                });
+                
+            }, 500);
+        }
+        
+        function submitName() {
+            const nameInput = document.querySelector('.name-input');
+            const name = nameInput.value.trim();
+            
+            if (!name || name.length < 2) {
+                alert('Por favor, digite um nome válido para descobrir seu anjo da guarda.');
+                return;
+            }
+            
+            // Efeito visual ao clicar
+            const btn = document.querySelector('.submit-btn');
+            btn.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                btn.style.transform = '';
+            }, 100);
+            
+            // Transição para tela de carregamento
+            showLoadingScreen(name);
+        }
+        
+        function showLoadingScreen(name) {
+            // Scroll para o topo primeiro
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            const container = document.querySelector('.container');
+            
+            // Pequeno delay para permitir o scroll suave
+            setTimeout(() => {
+                // Animação de fade out
+                container.style.opacity = '0';
+                container.style.transform = 'translateY(-20px)';
+            }, 200);
+            
+            setTimeout(() => {
+                // Mudar conteúdo para tela de carregamento
+                container.innerHTML = `
+                    <div class="loading-content">
+                        <h1 class="loading-title">
+                            🔮 Analisando Sua Resposta... 🔮
+                        </h1>
+                        
+                        <div class="mystical-circle">
+                            <div class="circle-progress">
+                                <svg class="progress-ring" width="200" height="200">
+                                    <circle class="progress-ring-bg" cx="100" cy="100" r="90"></circle>
+                                    <circle class="progress-ring-fill" cx="100" cy="100" r="90"></circle>
+                                </svg>
+                                <div class="percentage-text">0%</div>
+                            </div>
+                        </div>
+                        
+                        <p class="loading-message">
+                            Conectando com as energias celestiais...<br>
+                            <span class="highlight">Seu anjo está sendo revelado...</span>
+                        </p>
+                        
+                        <div class="mystical-dots">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                `;
+                
+                // Adicionar estilos para a tela de carregamento
+                const loadingStyles = document.createElement('style');
+                loadingStyles.id = 'loading-styles';
+                loadingStyles.textContent = `
+                    .loading-content {
+                        text-align: center;
+                        padding: 20px 0;
+                    }
+                    
+                    .loading-title {
+                        font-family: 'Cinzel', serif;
+                        font-size: 2rem;
+                        font-weight: 700;
+                        background: linear-gradient(45deg, #daa520, #ffd700, #fff8dc);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        margin-bottom: 30px;
+                        text-shadow: 0 0 30px rgba(218, 165, 32, 0.5);
+                        letter-spacing: 1px;
+                        animation: titlePulse 2s ease-in-out infinite;
+                    }
+                    
+                    @keyframes titlePulse {
+                        0%, 100% { transform: scale(1); }
+                        50% { transform: scale(1.05); }
+                    }
+                    
+                    .mystical-circle {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 40px 0;
+                        position: relative;
+                    }
+                    
+                    .circle-progress {
+                        position: relative;
+                        width: 200px;
+                        height: 200px;
+                    }
+                    
+                    .progress-ring {
+                        transform: rotate(-90deg);
+                        filter: drop-shadow(0 0 20px rgba(218, 165, 32, 0.5));
+                    }
+                    
+                    .progress-ring-bg {
+                        fill: none;
+                        stroke: rgba(25, 25, 112, 0.3);
+                        stroke-width: 8;
+                    }
+                    
+                    .progress-ring-fill {
+                        fill: none;
+                        stroke: url(#gradient);
+                        stroke-width: 8;
+                        stroke-linecap: round;
+                        stroke-dasharray: 565.48;
+                        stroke-dashoffset: 565.48;
+                        transition: stroke-dashoffset 0.1s ease;
+                    }
+                    
+                    .percentage-text {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-family: 'Cinzel', serif;
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: #daa520;
+                        text-shadow: 0 0 20px rgba(218, 165, 32, 0.7);
+                        animation: percentGlow 1.5s ease-in-out infinite alternate;
+                    }
+                    
+                    @keyframes percentGlow {
+                        0% { text-shadow: 0 0 20px rgba(218, 165, 32, 0.7); }
+                        100% { text-shadow: 0 0 30px rgba(218, 165, 32, 0.9), 0 0 40px rgba(255, 215, 0, 0.5); }
+                    }
+                    
+                    .loading-message {
+                        font-family: 'Cormorant Garamond', serif;
+                        font-size: 1.3rem;
+                        color: #e6e6fa;
+                        margin: 30px 0;
+                        line-height: 1.6;
+                        font-style: italic;
+                    }
+                    
+                    .mystical-dots {
+                        display: flex;
+                        justify-content: center;
+                        gap: 10px;
+                        margin: 20px 0;
+                    }
+                    
+                    .dot {
+                        width: 12px;
+                        height: 12px;
+                        background: radial-gradient(circle, #daa520, #b8860b);
+                        border-radius: 50%;
+                        animation: dotPulse 1.5s ease-in-out infinite;
+                        box-shadow: 0 0 15px rgba(218, 165, 32, 0.6);
+                    }
+                    
+                    .dot:nth-child(1) { animation-delay: 0s; }
+                    .dot:nth-child(2) { animation-delay: 0.3s; }
+                    .dot:nth-child(3) { animation-delay: 0.6s; }
+                    
+                    @keyframes dotPulse {
+                        0%, 100% { 
+                            transform: scale(1); 
+                            opacity: 0.7;
+                        }
+                        50% { 
+                            transform: scale(1.5); 
+                            opacity: 1;
+                        }
+                    }
+                    
+                    /* Mobile adjustments */
+                    @media (max-width: 600px) {
+                        .loading-title {
+                            font-size: 1.4rem;
+                            margin-bottom: 20px;
+                            padding: 0 10px;
+                        }
+                        
+                        .mystical-circle {
+                            margin: 25px 0;
+                        }
+                        
+                        .circle-progress {
+                            width: 150px;
+                            height: 150px;
+                        }
+                        
+                        .progress-ring {
+                            width: 150px;
+                            height: 150px;
+                        }
+                        
+                        .progress-ring-bg, .progress-ring-fill {
+                            r: 65;
+                            stroke-dasharray: 408.41;
+                        }
+                        
+                        .progress-ring-fill {
+                            stroke-dashoffset: 408.41;
+                        }
+                        
+                        .percentage-text {
+                            font-size: 1.5rem;
+                        }
+                        
+                        .loading-message {
+                            font-size: 1.1rem;
+                            margin: 20px 0;
+                            padding: 0 10px;
+                        }
+                        
+                        .dot {
+                            width: 8px;
+                            height: 8px;
+                        }
+                    }
+                    
+                    @media (max-width: 480px) {
+                        .loading-title {
+                            font-size: 1.2rem;
+                        }
+                        
+                        .circle-progress {
+                            width: 120px;
+                            height: 120px;
+                        }
+                        
+                        .progress-ring {
+                            width: 120px;
+                            height: 120px;
+                        }
+                        
+                        .progress-ring-bg, .progress-ring-fill {
+                            r: 50;
+                            stroke-dasharray: 314.16;
+                        }
+                        
+                        .progress-ring-fill {
+                            stroke-dashoffset: 314.16;
+                        }
+                        
+                        .percentage-text {
+                            font-size: 1.2rem;
+                        }
+                        
+                        .loading-message {
+                            font-size: 1rem;
+                            line-height: 1.4;
+                        }
+                    }
+                `;
+                
+                document.head.appendChild(loadingStyles);
+                
+                // Adicionar gradiente SVG
+                const svg = container.querySelector('.progress-ring');
+                svg.innerHTML = `
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#daa520;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#ffd700;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#fff8dc;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="progress-ring-bg" cx="100" cy="100" r="90"></circle>
+                    <circle class="progress-ring-fill" cx="100" cy="100" r="90"></circle>
+                `;
+                
+                // Animação de fade in
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+                
+                // Iniciar animação da porcentagem
+                startPercentageAnimation(name);
+                
+            }, 700);
+        }
+        
+        function startPercentageAnimation(name) {
+            const percentageText = document.querySelector('.percentage-text');
+            const progressRingFill = document.querySelector('.progress-ring-fill');
+            const loadingMessage = document.querySelector('.loading-message');
+            
+            let percentage = 0;
+            const duration = 4000; // 4 segundos
+            const interval = 50; // Atualiza a cada 50ms
+            const increment = (100 * interval) / duration;
+            
+            // Mensagens que mudam durante o carregamento
+            const messages = [
+                'Conectando com as energias celestiais...<br><span class="highlight">Seu anjo está sendo revelado...</span>',
+                'Interpretando suas respostas sagradas...<br><span class="highlight">Energias se alinhando...</span>',
+                'Consultando o reino angelical...<br><span class="highlight">Quase pronto...</span>',
+                'Revelação completa!<br><span class="highlight">Preparando resultado...</span>'
+            ];
+            
+            const timer = setInterval(() => {
+                percentage += increment;
+                
+                if (percentage >= 100) {
+                    percentage = 100;
+                    clearInterval(timer);
+                    
+                    // Aguardar um pouco antes de mostrar o resultado
+                    setTimeout(() => {
+                        showResult(name);
+                    }, 500);
+                }
+                
+                // Atualizar texto da porcentagem
+                percentageText.textContent = Math.floor(percentage) + '%';
+                
+                // Atualizar círculo de progresso
+                const circumference = 2 * Math.PI * 90; // 2πr onde r=90
+                const offset = circumference - (percentage / 100) * circumference;
+                progressRingFill.style.strokeDashoffset = offset;
+                
+                // Mudar mensagem baseado na porcentagem
+                if (percentage >= 25 && percentage < 50) {
+                    loadingMessage.innerHTML = messages[1];
+                } else if (percentage >= 50 && percentage < 80) {
+                    loadingMessage.innerHTML = messages[2];
+                } else if (percentage >= 80) {
+                    loadingMessage.innerHTML = messages[3];
+                }
+                
+            }, interval);
+        }
+
+        function showResult(name) {
+            // Scroll para o topo primeiro
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            const container = document.querySelector('.container');
+            
+            // Pequeno delay para permitir o scroll suave
+            setTimeout(() => {
+                // Animação de fade out
+                container.style.opacity = '0';
+                container.style.transform = 'translateY(-20px)';
+            }, 200);
+            
+            setTimeout(() => {
+                // Remover estilos de carregamento
+                const loadingStyles = document.getElementById('loading-styles');
+                if (loadingStyles) {
+                    loadingStyles.remove();
+                }
+                
+                // Mudar conteúdo para resultado
+                container.innerHTML = `
+                    <div class="result-content">
+                        <h1 class="result-title">
+                            Incrível! ${name.toUpperCase()}, seu anjo<br>
+                            da guarda é <span class="highlight">SÃO MIGUEL<br>
+                            ARCANJO!</span>
+                        </h1>
+                        
+                        <div class="angel-result-image">
+                            <img src="images/miguel3.png" class="result-angel-img" onclick="redirectToPage()">
+                        </div>
+                        
+                        <p class="angel-description">
+                            Líder do exército celestial, seu canto, o<br>
+                            mais intenso, pode realizar milagres<br>
+                            financeiros em menos de 24 horas.
+                        </p>
+                        
+                        <p class="call-to-action">
+                            Clique no Botão Abaixo para ouvir o<br>
+                            canto do seu Anjo!
+                        </p>
+                        
+                        <button class="manifest-btn" onclick="manifestWithAngel()">
+                            <span class="play-icon">▶</span>
+                            Clique Aqui para Manifestar<br>
+                            com São Miguel
+                        </button>
+                    </div>
+                `;
+                
+                // Animação de fade in
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+                
+            }, 700);
+        }
+
+        // Função para o botão de manifestar
+        function manifestWithAngel() {
+        // Redireciona para a página resultado.html
+        window.location.href = 'https://jornadacommeuanjo.site/canto3/';
+        }
+
+        // Permitir envio com Enter - funciona dinamicamente
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const ageInput = document.querySelector('.age-input:not(.name-input)');
+                const nameInput = document.querySelector('.name-input');
+                
+                if (ageInput && !nameInput) {
+                    submitAge();
+                } else if (nameInput) {
+                    submitName();
+                }
+            }
+        });
+        
+        // Efeito de foco suave no input - funciona dinamicamente
+        document.addEventListener('focus', function(e) {
+            if (e.target.classList.contains('age-input')) {
+                e.target.style.transform = 'scale(1.02)';
+            }
+        }, true);
+        
+        document.addEventListener('blur', function(e) {
+            if (e.target.classList.contains('age-input')) {
+                e.target.style.transform = 'scale(1)';
+            }
+        }, true);
+    </script>
+    
+    <script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+
+<script>
+  // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
+  const link = 'https://jornadacommeuanjo.site/canto3/';
+
+  function setBackRedirect(url) {
+    let urlBackRedirect = url;
+    urlBackRedirect = urlBackRedirect =
+      urlBackRedirect.trim() +
+      (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+      document.location.search.replace('?', '').toString();
+
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+
+    window.addEventListener('popstate', () => {
+      console.log('onpopstate', urlBackRedirect);
+      setTimeout(() => {
+        location.href = urlBackRedirect;
+      }, 1);
+    });
+  }
+
+  setBackRedirect(link);
+</script>
+
+
+</body></html>
